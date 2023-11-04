@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:layout_gravity="center_vertical"
+    tools:context=".activitys.AuthActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="GatoFlix"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/bg_intro"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_swith_left"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btnCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cadastro"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Email"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loginEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPersonName|textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Senha"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@android:color/darker_gray"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loginSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/lRebootSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="5dp"
+                    android:text="Esqueceu a senha?"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Digite seu nome"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cadastroNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPersonName|textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Digite seu email"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cadastroEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPersonName|textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hint="Senha"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@android:color/darker_gray"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cadastroSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Confirmar Senha"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@android:color/darker_gray"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cadastroConfirmarSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutRecuperarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="22dp"
+                    android:text="Enviamos um link de recuperação para seu email,
+certifique-se que o email informado é válido"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold|normal" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite seu Email"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/recuperarEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:ems="10"
+                        android:inputType="textPersonName|textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/bg_buttom"
+            android:padding="12dp"
+            android:text="Confirmar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

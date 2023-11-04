@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "687392144146",
+    "project_id": "netflix-clone-9bc48",
+    "storage_bucket": "netflix-clone-9bc48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687392144146:android:1f33e5e6f08186e248d1cb",
+        "android_client_info": {
+          "package_name": "com.baggold.net.netflixclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687392144146-oc6de15q6371shs0nbl071b1r80gnebi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAidwkO5QADyPyB2R1dK3Lxio176dG1Ugw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687392144146-oc6de15q6371shs0nbl071b1r80gnebi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687392144146:android:1f34e12adbbad12348d1cb",
+        "android_client_info": {
+          "package_name": "com.example.appfilmesapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687392144146-oc6de15q6371shs0nbl071b1r80gnebi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAidwkO5QADyPyB2R1dK3Lxio176dG1Ugw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687392144146-oc6de15q6371shs0nbl071b1r80gnebi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
