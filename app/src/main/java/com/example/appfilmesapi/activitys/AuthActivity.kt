@@ -199,10 +199,6 @@ class AuthActivity : AppCompatActivity() {
                     erroCredenciaisInvalidas.printStackTrace()
                     exibirMensagem("E-mail inválido, digite outro e-mail!")
 
-                } catch (erroEmailExistente: FirebaseAuthUserCollisionException) {
-                    erroEmailExistente.printStackTrace()
-                    exibirMensagem("Este e-mail esta em uso!")
-
                 } catch (erroUsuarioInvalido: FirebaseAuthInvalidUserException) {
                     erroUsuarioInvalido.printStackTrace()
                     exibirMensagem("Este usuario não existe!")
@@ -269,7 +265,7 @@ class AuthActivity : AppCompatActivity() {
 
         firestore
             .collection("usuarios")
-            .document(usuario.id)
+            .document(usuario.idUsuario)
             .set(usuario)
             .addOnSuccessListener {
                 exibirMensagem("Sucesso ao fazer seu cadastro!")

@@ -22,16 +22,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
+
             val usuarioAtual = auth.currentUser
+
             if (usuarioAtual != null) {
-                val intent = Intent(this, TelaPrincipalActivity::class.java)
-                startActivity(intent)
+                startActivity(Intent(this, TelaPrincipalActivity::class.java))
                 finish()
+
             } else {
                 val intent = Intent(this, AuthActivity::class.java)
                 startActivity(intent)
                 finish()
             }
+
         }, 2000)
     }
 

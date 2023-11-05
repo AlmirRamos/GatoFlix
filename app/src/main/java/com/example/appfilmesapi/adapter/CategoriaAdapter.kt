@@ -2,21 +2,27 @@ package com.example.appfilmesapi.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.appfilmesapi.databinding.ItemCategioriaBinding
 import com.example.appfilmesapi.model.Categoria
+import com.example.appfilmesapi.model.Filme
 
 class CategoriaAdapter(
     private val listaCategorias: MutableList<Categoria>
+
 ): Adapter<CategoriaAdapter.CategoriaViewHolder>(){
 
     inner class CategoriaViewHolder(private val binding: ItemCategioriaBinding) : ViewHolder(binding.root){
 
         val titulo = binding.textTitulo
+        val rvCategoriaFilmes = binding.rvCategoriaFilmes
 
-        fun bind(lista: Categoria){
-            titulo.text = lista.titulo
+        fun bind(listaCategoria: Categoria){
+            titulo.text = listaCategoria.titulo
+            rvCategoriaFilmes.adapter = FilmeAdapter(listaCategoria.filmes)
+            rvCategoriaFilmes.layoutManager = LinearLayoutManager(titulo.context, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 
@@ -30,7 +36,8 @@ class CategoriaAdapter(
     }
 
     override fun onBindViewHolder(holder: CategoriaViewHolder, position: Int) {
-        val lista = listaCategorias[position]
-        holder.bind(lista)
+        val listaCategoria = listaCategorias[position]
+        holder.bind(listaCategoria)
+
     }
 }
