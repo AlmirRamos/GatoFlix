@@ -2,17 +2,15 @@ package com.example.appfilmesapi.activitys
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.appfilmesapi.R
 import com.example.appfilmesapi.adapter.CategoriaAdapter
 import com.example.appfilmesapi.api.Api
 import com.example.appfilmesapi.databinding.ActivityTelaPrincipalBinding
 import com.example.appfilmesapi.model.Categoria
 import com.example.appfilmesapi.model.Categorias
-import com.example.appfilmesapi.model.Filme
 import com.example.appfilmesapi.utill.exibirMensagem
 import com.google.firebase.auth.FirebaseAuth
 import retrofit2.Call
@@ -65,7 +63,7 @@ class TelaPrincipalActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Categorias>, t: Throwable) {
-                TODO("Not yet implemented")
+                exibirMensagem("Erro ao recuperar filmes")
             }
 
         })

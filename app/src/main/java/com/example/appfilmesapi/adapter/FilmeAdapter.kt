@@ -1,6 +1,5 @@
 package com.example.appfilmesapi.adapter
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import com.example.appfilmesapi.activitys.DetalhesActivity
 import com.example.appfilmesapi.databinding.ItemFilmeBinding
 import com.example.appfilmesapi.model.Filme
 import com.squareup.picasso.Picasso
-import retrofit2.Retrofit
 
 class FilmeAdapter(
     private val listaFilme: MutableList<Filme>,
