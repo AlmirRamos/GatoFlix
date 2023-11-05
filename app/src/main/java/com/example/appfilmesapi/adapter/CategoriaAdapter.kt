@@ -1,5 +1,6 @@
 package com.example.appfilmesapi.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -7,11 +8,9 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.appfilmesapi.databinding.ItemCategioriaBinding
 import com.example.appfilmesapi.model.Categoria
-import com.example.appfilmesapi.model.Filme
 
 class CategoriaAdapter(
-    private val listaCategorias: MutableList<Categoria>
-
+    val listaCategorias: MutableList<Categoria>
 ): Adapter<CategoriaAdapter.CategoriaViewHolder>(){
 
     inner class CategoriaViewHolder(private val binding: ItemCategioriaBinding) : ViewHolder(binding.root){
@@ -20,7 +19,9 @@ class CategoriaAdapter(
         val rvCategoriaFilmes = binding.rvCategoriaFilmes
 
         fun bind(listaCategoria: Categoria){
+
             titulo.text = listaCategoria.titulo
+
             rvCategoriaFilmes.adapter = FilmeAdapter(listaCategoria.filmes)
             rvCategoriaFilmes.layoutManager = LinearLayoutManager(titulo.context, LinearLayoutManager.HORIZONTAL, false)
         }
